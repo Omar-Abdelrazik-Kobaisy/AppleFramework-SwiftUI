@@ -13,6 +13,8 @@
 		07A2E8D72B38D97C008D56D5 /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2E8D62B38D97C008D56D5 /* Framework.swift */; };
 		07A2E8D92B38DAD0008D56D5 /* FrameworkGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2E8D82B38DAD0008D56D5 /* FrameworkGridView.swift */; };
 		07A2E8DD2B38DD92008D56D5 /* FrameworkTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2E8DC2B38DD92008D56D5 /* FrameworkTitleView.swift */; };
+		07A2E8E22B38E430008D56D5 /* FrameworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2E8E12B38E430008D56D5 /* FrameworkDetailView.swift */; };
+		07A2E8E42B38E957008D56D5 /* FrameworkGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2E8E32B38E957008D56D5 /* FrameworkGridViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		07A2E8D62B38D97C008D56D5 /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
 		07A2E8D82B38DAD0008D56D5 /* FrameworkGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridView.swift; sourceTree = "<group>"; };
 		07A2E8DC2B38DD92008D56D5 /* FrameworkTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTitleView.swift; sourceTree = "<group>"; };
+		07A2E8E12B38E430008D56D5 /* FrameworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailView.swift; sourceTree = "<group>"; };
+		07A2E8E32B38E957008D56D5 /* FrameworkGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +96,27 @@
 		07A2E8DE2B38E2E5008D56D5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				07A2E8D82B38DAD0008D56D5 /* FrameworkGridView.swift */,
+				07A2E8E02B38E40E008D56D5 /* FrameworkDetailView */,
+				07A2E8DF2B38E3F3008D56D5 /* FrameworkGridView */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		07A2E8DF2B38E3F3008D56D5 /* FrameworkGridView */ = {
+			isa = PBXGroup;
+			children = (
+				07A2E8D82B38DAD0008D56D5 /* FrameworkGridView.swift */,
+				07A2E8E32B38E957008D56D5 /* FrameworkGridViewModel.swift */,
+			);
+			path = FrameworkGridView;
+			sourceTree = "<group>";
+		};
+		07A2E8E02B38E40E008D56D5 /* FrameworkDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				07A2E8E12B38E430008D56D5 /* FrameworkDetailView.swift */,
+			);
+			path = FrameworkDetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,9 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A2E8D92B38DAD0008D56D5 /* FrameworkGridView.swift in Sources */,
+				07A2E8E22B38E430008D56D5 /* FrameworkDetailView.swift in Sources */,
 				07A2E8D72B38D97C008D56D5 /* Framework.swift in Sources */,
 				07A2E8DD2B38DD92008D56D5 /* FrameworkTitleView.swift in Sources */,
 				07A2E8C92B38D7EB008D56D5 /* AppleFramework_SwiftUIApp.swift in Sources */,
+				07A2E8E42B38E957008D56D5 /* FrameworkGridViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
