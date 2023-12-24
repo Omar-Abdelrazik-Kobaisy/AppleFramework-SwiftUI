@@ -12,7 +12,7 @@ struct FrameworkTitleView: View {
     let framework : Framework
     
     var body: some View {
-        VStack{
+        HStack{
             Image(framework.imageName)
                 .resizable()
                 .frame(width: 90 , height: 90)
@@ -23,8 +23,8 @@ struct FrameworkTitleView: View {
                 .foregroundColor(Color(.label))
                 .scaledToFit()
                 .minimumScaleFactor(0.5)
+                .padding()
         }
-        .padding()
     }
 }
 
