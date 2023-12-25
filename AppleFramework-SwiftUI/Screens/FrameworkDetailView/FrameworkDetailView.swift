@@ -10,12 +10,12 @@ import SwiftUI
 struct FrameworkDetailView: View {
     //MARK: properties
     var framework : Framework
-    @Binding var isShowingDetailView : Bool
+//    @Binding var isShowingDetailView : Bool
     var body: some View {
         VStack{
-            XDismissButton(isShowingDetailView: $isShowingDetailView)
+//            XDismissButton(isShowingDetailView: $isShowingDetailView)
             
-            Spacer()
+//            Spacer()
             FrameworkTitleView(framework:framework)
             Text(framework.description)
                 .font(.body)
@@ -23,13 +23,19 @@ struct FrameworkDetailView: View {
             Spacer()
             
             Link(destination: URL(string: framework.urlString)!) {
-                Text("Learn More")
-                    .frame(width: 280, height: 70)
-                    .background(Color.red.gradient)
-                    .foregroundColor(.white)
-                    .font(.system(size: 30,weight: .semibold))
-                    .cornerRadius(10)
+//                Text("Learn More")
+//                    .frame(width: 280, height: 70)
+//                    .background(Color.red.gradient)
+//                    .foregroundColor(.white)
+//                    .font(.system(size: 30,weight: .semibold))
+//                    .cornerRadius(10)
+                Label("Learn More", systemImage: "book.fill")
             }
+            .buttonStyle(.bordered)
+            .controlSize(.large)
+            .foregroundColor(.white)
+            .background(Color.red.gradient)
+            .cornerRadius(10)
             Spacer()
         }
     }
@@ -37,7 +43,9 @@ struct FrameworkDetailView: View {
 
 struct FrameworkDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        FrameworkDetailView(framework: MockData.sampleFramework, isShowingDetailView: .constant(false))
+        FrameworkDetailView(framework: MockData.sampleFramework
+                            //, isShowingDetailView: .constant(false)
+        )
             .preferredColorScheme(.dark)
     }
 }

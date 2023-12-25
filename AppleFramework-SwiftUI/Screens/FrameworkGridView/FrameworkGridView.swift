@@ -28,18 +28,24 @@ struct FrameworkGridView: View {
 //                FrameworkDetailView(framework: vm.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $vm.isShowingDetailView)
 //            }
 //        }
-        NavigationView {
+        NavigationStack {
             List{
                 ForEach(MockData.frameworks){framework in
-                    NavigationLink(
-                        destination:FrameworkDetailView(framework: framework
-                                                        ,isShowingDetailView: $vm.isShowingDetailView)){
-                        FrameworkTitleView(framework: framework)
-                    }
+//                    NavigationLink(
+//                        destination:FrameworkDetailView(framework: framework
+//                                                        ,isShowingDetailView: $vm.isShowingDetailView)){
+//                        FrameworkTitleView(framework: framework)
+//                    }
+                        NavigationLink(value: framework, label: {
+                            FrameworkTitleView(framework: framework)
+                        })
                 }
             }
             .listStyle(.plain)
             .navigationTitle("🍎 Frameworks")
+            .navigationDestination(for: Framework.self) { framework in
+                FrameworkDetailView(framework: framework)
+            }
 //            .sheet(isPresented: $vm.isShowingDetailView) {
 //                FrameworkDetailView(framework: vm.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $vm.isShowingDetailView)
 //            }
